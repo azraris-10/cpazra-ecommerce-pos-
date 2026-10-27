@@ -1,0 +1,357 @@
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* CPazra Outdoor & Thrifting Earthy Palette */
+  --cp-forest: #1b3b2b;
+  --cp-forest-dark: #11251b;
+  --cp-forest-light: #28543e;
+  --cp-forest-subtle: #edf3f0;
+  
+  --cp-amber: #d97706;
+  --cp-amber-hover: #b45309;
+  --cp-amber-subtle: #fef3c7;
+  
+  --cp-sand: #f5f1eb;
+  --cp-stone: #e8e2d8;
+  --cp-bg: #fbf9f6;
+  
+  --cp-text-main: #1f2937;
+  --cp-text-muted: #6b7280;
+  --cp-text-light: #9ca3af;
+  
+  --cp-border: #e5e0d8;
+  --cp-card-bg: #ffffff;
+  
+  --cp-success: #15803d;
+  --cp-danger: #b91c1c;
+  --cp-warning: #b45309;
+}
+
+html {
+  font-size: 14px; /* Compact, balanced scale (was default 16px) */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--cp-bg);
+  color: var(--cp-text-main);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modulated Typographic Scale to avoid oversized headers */
+h1, .h1 {
+  font-size: 1.7rem;
+  letter-spacing: -0.02em;
+}
+
+h2, .h2 {
+  font-size: 1.4rem;
+  letter-spacing: -0.015em;
+}
+
+h3, .h3 {
+  font-size: 1.22rem;
+  letter-spacing: -0.01em;
+}
+
+h4, .h4 {
+  font-size: 1.12rem;
+}
+
+h5, .h5 {
+  font-size: 1.02rem;
+}
+
+h6, .h6 {
+  font-size: 0.92rem;
+}
+
+.display-5 {
+  font-size: 2.15rem !important;
+  line-height: 1.2;
+}
+
+.display-6 {
+  font-size: 1.75rem !important;
+  line-height: 1.25;
+}
+
+.fs-1 { font-size: 1.75rem !important; }
+.fs-2 { font-size: 1.45rem !important; }
+.fs-3 { font-size: 1.25rem !important; }
+.fs-4 { font-size: 1.12rem !important; }
+.fs-5 { font-size: 1.02rem !important; }
+.fs-6 { font-size: 0.88rem !important; }
+
+/* Compact Buttons & Form Sizing */
+.btn {
+  font-size: 0.85rem;
+  padding: 0.42rem 0.9rem;
+}
+.btn-sm {
+  font-size: 0.76rem;
+  padding: 0.25rem 0.6rem;
+}
+.btn-lg {
+  font-size: 0.95rem;
+  padding: 0.55rem 1.25rem;
+}
+
+.form-control, .form-select {
+  font-size: 0.88rem;
+  padding: 0.45rem 0.75rem;
+}
+.form-control-sm, .form-select-sm {
+  font-size: 0.78rem;
+  padding: 0.28rem 0.5rem;
+}
+.form-control-lg {
+  font-size: 0.98rem;
+  padding: 0.55rem 0.95rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede7;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8c0b4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3998b;
+}
+
+/* Tabular Numbers for Prices & Quantities */
+.tabular-nums, .price-tag, .font-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Forest Buttons & Accent Components */
+.btn-forest {
+  background-color: var(--cp-forest);
+  color: #ffffff;
+  border: 1px solid var(--cp-forest);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-forest:hover, .btn-forest:focus {
+  background-color: var(--cp-forest-dark);
+  color: #ffffff;
+  border-color: var(--cp-forest-dark);
+  box-shadow: 0 4px 12px rgba(27, 59, 43, 0.25);
+}
+
+.btn-forest-outline {
+  background-color: transparent;
+  color: var(--cp-forest);
+  border: 1.5px solid var(--cp-forest);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-forest-outline:hover {
+  background-color: var(--cp-forest);
+  color: #ffffff;
+}
+
+.btn-amber {
+  background-color: var(--cp-amber);
+  color: #ffffff;
+  border: 1px solid var(--cp-amber);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-amber:hover, .btn-amber:focus {
+  background-color: var(--cp-amber-hover);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+}
+
+/* Cards & Surfaces */
+.cp-card {
+  background: var(--cp-card-bg);
+  border: 1px solid var(--cp-border);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cp-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px rgba(27, 59, 43, 0.08);
+  border-color: #d1c9bd;
+}
+
+/* Thrift Condition Grade Tags */
+.grade-badge-s {
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.grade-badge-a {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.grade-badge-b {
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.grade-badge-c {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+
+/* Category Filter Pills */
+.filter-tab {
+  background-color: #ffffff;
+  color: var(--cp-text-muted);
+  border: 1px solid var(--cp-border);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.filter-tab:hover {
+  background-color: var(--cp-sand);
+  color: var(--cp-forest);
+  border-color: #d5cdbf;
+}
+.filter-tab.active {
+  background-color: var(--cp-forest);
+  color: #ffffff;
+  border-color: var(--cp-forest);
+  box-shadow: 0 2px 6px rgba(27, 59, 43, 0.2);
+}
+
+/* POS Screen Utilities */
+.pos-container {
+  height: calc(100vh - 65px);
+  overflow: hidden;
+}
+.pos-catalog-scroll {
+  height: calc(100vh - 170px);
+  overflow-y: auto;
+}
+.pos-cart-scroll {
+  height: calc(100vh - 380px);
+  overflow-y: auto;
+}
+
+/* Printable Thermal Receipt Mock */
+.thermal-receipt {
+  font-family: var(--font-mono);
+  background: #fff;
+  border: 1px dashed #9ca3af;
+  padding: 24px;
+  max-width: 360px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Subtle Toast Notification */
+.cp-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1090;
+  min-width: 280px;
+  max-width: 420px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Breadcrumb Styling */
+.cp-breadcrumb a {
+  color: var(--cp-forest);
+  text-decoration: none;
+  font-weight: 500;
+}
+.cp-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Form Controls with Earthy Focus */
+.form-control:focus, .form-select:focus {
+  border-color: var(--cp-forest);
+  box-shadow: 0 0 0 0.25rem rgba(27, 59, 43, 0.15);
+}
+
+/* Card Floating Badges (Left) & Action Icons (Right) */
+.card-badge-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+}
+
+.card-action-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.card-action-right:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
+

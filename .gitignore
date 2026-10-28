@@ -1,6 +1,6 @@
 node_modules/
 .aistudio/
-dist/
+# dist/
 .env
 *.local
 .DS_Store

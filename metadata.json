@@ -1,0 +1,8 @@
+{
+  "name": "TrailThrift",
+  "description": "TrailThrift - E-commerce platform for outdoor gear and thrift apparel for hiking, camping, and traveling.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
